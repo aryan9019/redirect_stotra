@@ -20,15 +20,30 @@ function delay(ms) {
 // Function to check version and redirect or show update message
 async function checkVersion() {
     const messageDiv = document.getElementById('message');
+    const logDiv = document.getElementById('log');
+    console.log('Starting version check');
+
+    // Show log message on HTML page
+    logDiv.innerHTML += 'Starting version check<br>';
+
     await delay(1000);
     
     if (!version) {
+        console.log('No version parameter found');
+        logDiv.innerHTML += 'No version parameter found<br>';
+        
         // Redirect to a specified URL if no version parameter is present
         window.location.href = "https://aryan9019.github.io/stotra/";
     } else if (version === expectedVersion) {
+        console.log('Version matches. Redirecting to local HTML file');
+        logDiv.innerHTML += 'Version matches. Redirecting to local HTML file<br>';
+        
         // Redirect to the desired URL if version matches
         window.location.href = "file:///android_asset/index.html";
     } else {
+        console.log('Version mismatch. Showing update message');
+        logDiv.innerHTML += 'Version mismatch. Showing update message<br>';
+        
         // Hide loader
         document.getElementById('loader').style.display = 'none';
 
