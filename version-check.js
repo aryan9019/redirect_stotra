@@ -55,6 +55,3 @@ async function checkVersion() {
         messageDiv.innerHTML = `Your app version (${version || 'unknown'}) is outdated. Please update to the latest version. <br><a class="update-link" href="https://example.com/download.apk">Download APK</a>`;
     }
 }
-
-// Run the version check on page load
-window.onload = checkVersion;
