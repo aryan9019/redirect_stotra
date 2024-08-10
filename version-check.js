@@ -7,7 +7,7 @@ function getUrlParameter(name) {
 }
 
 // Expected version
-const expectedVersion = "0.0.1";
+const expectedVersion = "0.0.2";
 
 // Get the version parameter from the URL
 const version = getUrlParameter('ver');
@@ -20,7 +20,7 @@ function delay(ms) {
 // Function to check version and redirect or show update message
 async function checkVersion() {
     const messageDiv = document.getElementById('message');
-    await delay(1000);
+    await delay(500);
     
     if (!version) {
         // Redirect to a specified URL if no version parameter is present
@@ -34,6 +34,6 @@ async function checkVersion() {
         document.getElementById('loader').style.display = 'none';
 
         // Show message to update the app
-        messageDiv.innerHTML = `Your app version (${version || 'unknown'}) is outdated. Please update to the latest version. <br><a class="update-link" href="https://example.com/download.apk">Download APK</a>`;
+        messageDiv.innerHTML = `Your app version (${version || 'unknown'}) is outdated. Please update to the latest version. <br><a class="update-link" href="https://www.pan.utiitsl.com/PAN/downloadFile?FileName=49A_Form_Updated.pdf">Download APK</a>`;
     }
 }
