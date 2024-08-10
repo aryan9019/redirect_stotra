@@ -34,6 +34,5 @@ async function checkVersion() {
         document.getElementById('loader').style.display = 'none';
 
         // Show message to update the app
-        messageDiv.innerHTML = `Your app version (${version || 'unknown'}) is outdated. Please update to the latest version. <br><a class="update-link" href="https://www.pan.utiitsl.com/PAN/downloadFile?FileName=49A_Form_Updated.pdf">Download APK</a>`;
-    }
+        messageDiv.innerHTML = `Your app version (${version || 'unknown'}) is outdated. Please update to the latest version.<br><a class="update-link" href="https://www.pan.utiitsl.com/PAN/downloadFile?FileName=49A_Form_Updated.pdf" target="_blank">Download New App</a>`}
 }
