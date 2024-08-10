@@ -62,9 +62,15 @@
         // Get the version parameter from the URL
         const version = getUrlParameter('ver');
 
+        //creating delay function
+        function delay(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+        }
+
         // Function to check version and redirect or show update message
         function checkVersion() {
             const messageDiv = document.getElementById('message');
+            await delay(3000);
 
             if (!version) {
                 // Redirect to a specified URL if no version parameter is present
