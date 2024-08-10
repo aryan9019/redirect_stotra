@@ -77,8 +77,10 @@
                 window.location.href = "https://aryan9019.github.io/stotra/";
             } else if (version === expectedVersion) {
                 // Redirect to the desired URL if version matches
+                await delay(2000);
                 window.location.href = "file:///android_asset/index.html";
             } else {
+                await delay(1500);
                 // Hide loader
                 document.getElementById('loader').style.display = 'none';
 
