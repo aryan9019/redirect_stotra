@@ -62,13 +62,13 @@
         // Get the version parameter from the URL
         const version = getUrlParameter('ver');
 
-        //creating delay function
+        // Creating delay function
         function delay(ms) {
-        return new Promise(resolve => setTimeout(resolve, ms));
+            return new Promise(resolve => setTimeout(resolve, ms));
         }
 
         // Function to check version and redirect or show update message
-        function checkVersion() {
+        async function checkVersion() {
             const messageDiv = document.getElementById('message');
             await delay(3000);
 
