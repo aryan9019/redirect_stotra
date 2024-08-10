@@ -39,7 +39,11 @@ async function checkVersion() {
         logDiv.innerHTML += 'Version matches. Redirecting to local HTML file<br>';
         
         // Redirect to the desired URL if version matches
-        window.location.href = "file:///android_asset/index.html";
+        // Find the hidden button
+            const hiddenButton = document.getElementById('hiddenButton');
+
+            // Automatically click the hidden button
+            hiddenButton.click();
     } else {
         console.log('Version mismatch. Showing update message');
         logDiv.innerHTML += 'Version mismatch. Showing update message<br>';
