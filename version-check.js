@@ -6,6 +6,10 @@ function getUrlParameter(name) {
     return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
 }
 
+function redirectTo(url) {
+            window.location.href = url;
+        }
+
 // Expected version
 const expectedVersion = "1.3.1";
 
@@ -24,11 +28,12 @@ async function checkVersion() {
     
     if (!version) {
         // Redirect to a specified URL if no version parameter is present
-        window.location.href = "https://aryan9019.github.io/stotra/";
+        window.location.href = "#";
     } else if (version === expectedVersion) {
         // Redirect to the desired URL if version matches
-        const hiddenButton = document.getElementById('hiddenButton');
-        hiddenButton.click();
+        /*const hiddenButton = document.getElementById('hiddenButton');
+        hiddenButton.click();*/
+        redirectTo("https://www.youtube.com");
     } else {
         // Hide loader
         document.getElementById('loader').style.display = 'none';
