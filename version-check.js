@@ -7,7 +7,7 @@ function getUrlParameter(name) {
 }
 
 // Expected version
-const expectedVersion = "1.2.1";
+const expectedVersion = "1.3.1";
 
 // Get the version parameter from the URL
 const version = getUrlParameter('ver');
