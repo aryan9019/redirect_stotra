@@ -55,7 +55,7 @@
                 // Redirect to the desired URL if version matches
                 //const hiddenButton = document.getElementById('hiddenButton');
                 //hiddenButton.click();
-                redirectTo("https://www.youtube.com");
+                redirectTo("https://www.google.com");
             } else {
                 // Hide loader
                 document.getElementById('loader').style.display = 'none';
