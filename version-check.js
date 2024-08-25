@@ -53,9 +53,9 @@
                 window.location.href = "#";
             } else if (version === expectedVersion) {
                 // Redirect to the desired URL if version matches
-                //const hiddenButton = document.getElementById('hiddenButton');
-                //hiddenButton.click();
-                redirectTo("https://www.youtube.com");
+                const hiddenButton = document.getElementById('hiddenButton');
+                hiddenButton.click();
+             //redirectTo("https://www.youtube.com");
             } else {
                 // Hide loader
                 document.getElementById('loader').style.display = 'none';
